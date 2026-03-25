@@ -31,8 +31,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, ${{inputs.name}}!
-    check-vesion:
-        name: Check node version
+    check-vesions:
+      runs-on: self-hosted
+      steps:
+      - name: Check node version
         run: node --version
 
 
